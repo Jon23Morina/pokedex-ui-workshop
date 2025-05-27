@@ -18,7 +18,7 @@ export default function PokemonPage({
 
   useEffect(() => {
     const fetchData = async () => {
-      const resp = await fetch("/api/pokemon/" + pokemon_id);
+      const resp = await fetch("/pokemons.json");
       // Creating a Map out of the raw json
       const pokemons: Map<string, Pokemon> = new Map(
         Object.entries(await resp.json())
